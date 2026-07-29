@@ -28,7 +28,24 @@
       content="width=device-width, initial-scale=1, viewport-fit=cover"
     />
 
-  
+  <script>
+    (function () {
+        function updateTomorrowDate() {
+            var el = document.getElementById('tomorrow');
+            if (!el) return;
+            var tomorrow = new Date();
+            tomorrow.setDate(tomorrow.getDate() + 1);
+            var day = tomorrow.getDate();
+            var months = ['JANUARY','FEBRUARY','MARCH','APRIL','MAY','JUNE','JULY','AUGUST','SEPTEMBER','OCTOBER','NOVEMBER','DECEMBER'];
+            el.textContent = day + ' ' + months[tomorrow.getMonth()];
+        }
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', updateTomorrowDate);
+        } else {
+            updateTomorrowDate();
+        }
+    })();
+    </script>
 
 </head>
 <body>
@@ -46,7 +63,7 @@
     <div class="s1-img-block-calendar">
       <img src="./images/img20.webp" alt="Calendar Icon">
     </div>
-    <div class="s1-date-text">START: TOMORROW’S DATE</div>
+    <div class="s1-date-text">START: <span id="tomorrow"></span></div>
   </div>
 
   <!-- Заголовки -->
@@ -327,7 +344,7 @@
         <p class="s5-card-desc">Move through 60 structured lessons for Front and Middle Split</p>
       </div>
       <div class="s5-video-container video-wrapper-small">
-        <video class="video-player" data-src="https://itden-cdn.b-cdn.net/3-in-1_new/new-tabs/2.mp4" poster="./images/poster-2.webp" playsinline loop muted preload="metadata"></video>
+        <video class="video-player" data-src="https://itden-cdn.b-cdn.net/splits/jjj2.mp4" poster="./images/poster-2.webp" playsinline loop muted preload="metadata"></video>
         <div class="video-overlay">
           <div class="video-play-btn" aria-label="Play">
             <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
@@ -350,7 +367,7 @@
         <p class="s5-card-desc">Return to tight areas, weaker sides, or difficult stages as often as needed</p>
       </div>
       <div class="s5-video-container video-wrapper-small">
-        <video class="video-player" data-src="https://itden-cdn.b-cdn.net/splits/34.mp4" poster="./images/poster-3.webp" playsinline loop muted preload="metadata"></video>
+        <video class="video-player" data-src="https://itden-cdn.b-cdn.net/splits/jjj3.mp4" poster="./images/poster-3.webp" playsinline loop muted preload="metadata"></video>
         <div class="video-overlay">
           <div class="video-play-btn" aria-label="Play">
             <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
@@ -411,86 +428,180 @@
 
   <!-- Swiper Контейнер -->
   <div class="swiper s6-swiper">
-    <div class="swiper-wrapper">
-      
-      <div class="swiper-slide s6-slide" data-video="https://itden-cdn.b-cdn.net/3-in-1_new/slider-3/1.MP4">
-        <img loading="lazy" src="./images/galerry/slide1.webp" alt="Review 1" class="s6-img">
-      </div>
-
-      <div class="swiper-slide s6-slide">
-        <img loading="lazy" src="./images/galerry/slide2.webp" alt="Review 2" class="s6-img">
-      </div>
-
-      <div class="swiper-slide s6-slide" data-video="https://itden-cdn.b-cdn.net/3-in-1_new/slider-3/3.MP4">
-        <img loading="lazy" src="./images/galerry/slide3.webp" alt="Review 3" class="s6-img">
-      </div>
-
-      <div class="swiper-slide s6-slide" data-video="https://itden-cdn.b-cdn.net/3-in-1_new/slider-3/4.MP4">
-        <img loading="lazy" src="./images/galerry/slide4.webp" alt="Review 4" class="s6-img">
-      </div>
-
-      <div class="swiper-slide s6-slide">
-        <img loading="lazy" src="./images/galerry/slide5.webp" alt="Review 5" class="s6-img">
-      </div>
-
-      <div class="swiper-slide s6-slide">
-        <img loading="lazy" src="./images/galerry/slide6.webp" alt="Review 6" class="s6-img">
-      </div>
-
-      <div class="swiper-slide s6-slide">
-        <img loading="lazy" src="./images/galerry/slide7.webp" alt="Review 7" class="s6-img">
-      </div>
-
-      <div class="swiper-slide s6-slide" data-video="https://itden-cdn.b-cdn.net/3-in-1_new/slider-3/8.MP4">
-        <img loading="lazy" src="./images/galerry/slide8.webp" alt="Review 8" class="s6-img">
-      </div>
-
-      <div class="swiper-slide s6-slide">
-        <img loading="lazy" src="./images/galerry/slide9.webp" alt="Review 9" class="s6-img">
-      </div>
-
-      <div class="swiper-slide s6-slide">
-        <img loading="lazy" src="./images/galerry/slide10.webp" alt="Review 10" class="s6-img">
-      </div>
-
-      <div class="swiper-slide s6-slide">
-        <img loading="lazy" src="./images/galerry/slide11.webp" alt="Review 11" class="s6-img">
-      </div>
-
-      <div class="swiper-slide s6-slide">
-        <img loading="lazy" src="./images/galerry/slide12.webp" alt="Review 12" class="s6-img">
-      </div>
-
-      <div class="swiper-slide s6-slide" data-video="https://itden-cdn.b-cdn.net/3-in-1_new/slider-3/13.MP4">
-        <img loading="lazy" src="./images/galerry/slide13.webp" alt="Review 13" class="s6-img">
-      </div>
-
-      <div class="swiper-slide s6-slide">
-        <img loading="lazy" src="./images/galerry/slide14.webp" alt="Review 14" class="s6-img">
-      </div>
-
-      <div class="swiper-slide s6-slide">
-        <img loading="lazy" src="./images/galerry/slide15.webp" alt="Review 15" class="s6-img">
-      </div>
-
-      <div class="swiper-slide s6-slide" data-video="https://itden-cdn.b-cdn.net/3-in-1_new/slider-3/16.MP4">
-        <img loading="lazy" src="./images/galerry/slide16.webp" alt="Review 16" class="s6-img">
-      </div>
-
-      <div class="swiper-slide s6-slide" data-video="https://itden-cdn.b-cdn.net/3-in-1_new/slider-3/17.MP4">
-        <img loading="lazy" src="./images/galerry/slide17.webp" alt="Review 17" class="s6-img">
-      </div>
-
-      <div class="swiper-slide s6-slide">
-        <img loading="lazy" src="./images/galerry/slide18.webp" alt="Review 18" class="s6-img">
-      </div>
-
-      <div class="swiper-slide s6-slide" data-video="https://itden-cdn.b-cdn.net/3-in-1_new/slider-3/20.MP4">
-        <img loading="lazy" src="./images/galerry/slide20.webp" alt="Review 20" class="s6-img">
-      </div>
-
+  <div class="swiper-wrapper">
+    
+    <!-- Slide 1 -->
+    <div class="swiper-slide s6-slide" data-video="https://itden-cdn.b-cdn.net/stretching/sdk23o.MP4">
+      <img loading="lazy" src="./images/galerry/1.webp" alt="Review 1" class="s6-img">
     </div>
+
+    <!-- Slide 2 -->
+    <div class="swiper-slide s6-slide">
+      <img loading="lazy" src="./images/galerry/2.webp" alt="Review 2" class="s6-img">
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="swiper-slide s6-slide">
+      <img loading="lazy" src="./images/galerry/3.webp" alt="Review 3" class="s6-img">
+    </div>
+
+    <!-- Slide 4 -->
+    <div class="swiper-slide s6-slide" data-video="https://itden-cdn.b-cdn.net/stretching/vd-2.mp4">
+      <img loading="lazy" src="./images/galerry/4.webp" alt="Review 4" class="s6-img">
+    </div>
+
+    <!-- Slide 5 -->
+    <div class="swiper-slide s6-slide">
+      <img loading="lazy" src="./images/galerry/5.webp" alt="Review 5" class="s6-img">
+    </div>
+
+    <!-- Slide 6 -->
+    <div class="swiper-slide s6-slide">
+      <img loading="lazy" src="./images/galerry/6.webp" alt="Review 6" class="s6-img">
+    </div>
+
+    <!-- Slide 7 -->
+    <div class="swiper-slide s6-slide">
+      <img loading="lazy" src="./images/galerry/7.webp" alt="Review 7" class="s6-img">
+    </div>
+
+    <!-- Slide 8 -->
+    <div class="swiper-slide s6-slide" data-video="https://itden-cdn.b-cdn.net/stretching/vd-3.mp4">
+      <img loading="lazy" src="./images/galerry/8.webp" alt="Review 8" class="s6-img">
+    </div>
+
+    <!-- Slide 9 -->
+    <div class="swiper-slide s6-slide">
+      <img loading="lazy" src="./images/galerry/9.webp" alt="Review 9" class="s6-img">
+    </div>
+
+    <!-- Slide 10 -->
+    <div class="swiper-slide s6-slide">
+      <img loading="lazy" src="./images/galerry/10.webp" alt="Review 10" class="s6-img">
+    </div>
+
+    <!-- Slide 11 -->
+    <div class="swiper-slide s6-slide">
+      <img loading="lazy" src="./images/galerry/11.webp" alt="Review 11" class="s6-img">
+    </div>
+
+    <!-- Slide 12 -->
+    <div class="swiper-slide s6-slide">
+      <img loading="lazy" src="./images/galerry/12.webp" alt="Review 12" class="s6-img">
+    </div>
+
+    <!-- Slide 13 -->
+    <div class="swiper-slide s6-slide" data-video="https://itden-cdn.b-cdn.net/stretching/vd-4.mp4">
+      <img loading="lazy" src="./images/galerry/13.webp" alt="Review 13" class="s6-img">
+    </div>
+
+    <!-- Slide 14 -->
+    <div class="swiper-slide s6-slide">
+      <img loading="lazy" src="./images/galerry/14.webp" alt="Review 14" class="s6-img">
+    </div>
+
+    <!-- Slide 15 -->
+    <div class="swiper-slide s6-slide">
+      <img loading="lazy" src="./images/galerry/15.webp" alt="Review 15" class="s6-img">
+    </div>
+
+    <!-- Slide 16 -->
+    <div class="swiper-slide s6-slide">
+      <img loading="lazy" src="./images/galerry/16.webp" alt="Review 16" class="s6-img">
+    </div>
+
+    <!-- Slide 17 -->
+    <div class="swiper-slide s6-slide">
+      <img loading="lazy" src="./images/galerry/17.webp" alt="Review 17" class="s6-img">
+    </div>
+
+    <!-- Slide 18 -->
+    <div class="swiper-slide s6-slide" data-video="https://itden-cdn.b-cdn.net/stretching/video2.MP4">
+      <img loading="lazy" src="./images/galerry/18.webp" alt="Review 18" class="s6-img">
+    </div>
+
+    <!-- Slide 19 -->
+    <div class="swiper-slide s6-slide">
+      <img loading="lazy" src="./images/galerry/19.webp" alt="Review 19" class="s6-img">
+    </div>
+
+    <!-- Slide 20 -->
+    <div class="swiper-slide s6-slide">
+      <img loading="lazy" src="./images/galerry/20.webp" alt="Review 20" class="s6-img">
+    </div>
+
+    <!-- Slide 21 -->
+    <div class="swiper-slide s6-slide" data-video="https://itden-cdn.b-cdn.net/stretching/video4.MP4">
+      <img loading="lazy" src="./images/galerry/21.webp" alt="Review 21" class="s6-img">
+    </div>
+
+    <!-- Slide 22 -->
+    <div class="swiper-slide s6-slide">
+      <img loading="lazy" src="./images/galerry/22.webp" alt="Review 22" class="s6-img">
+    </div>
+
+    <!-- Slide 23 -->
+    <div class="swiper-slide s6-slide">
+      <img loading="lazy" src="./images/galerry/23.webp" alt="Review 23" class="s6-img">
+    </div>
+
+    <!-- Slide 24 -->
+    <div class="swiper-slide s6-slide" data-video="https://itden-cdn.b-cdn.net/stretching/Instagram_15.04.2026_MiddleSplit_Video.mp4">
+      <img loading="lazy" src="./images/galerry/24.webp" alt="Review 24" class="s6-img">
+    </div>
+
+    <!-- Slide 25 -->
+    <div class="swiper-slide s6-slide" data-video="https://itden-cdn.b-cdn.net/stretching/video5.MP4">
+      <img loading="lazy" src="./images/galerry/25.webp" alt="Review 25" class="s6-img">
+    </div>
+
+    <!-- Slide 26 -->
+    <div class="swiper-slide s6-slide">
+      <img loading="lazy" src="./images/galerry/26.webp" alt="Review 26" class="s6-img">
+    </div>
+
+    <!-- Slide 27 -->
+    <div class="swiper-slide s6-slide" data-video="https://itden-cdn.b-cdn.net/stretching/Instagram_15.04.2026_FullSplit_Video.MP4">
+      <img loading="lazy" src="./images/galerry/27.webp" alt="Review 27" class="s6-img">
+    </div>
+
+    <!-- Slide 28 -->
+    <div class="swiper-slide s6-slide">
+      <img loading="lazy" src="./images/galerry/28.webp" alt="Review 28" class="s6-img">
+    </div>
+
+    <!-- Slide 29 -->
+    <div class="swiper-slide s6-slide" data-video="https://itden-cdn.b-cdn.net/stretching/vd-10.mp4">
+      <img loading="lazy" src="./images/galerry/29.webp" alt="Review 29" class="s6-img">
+    </div>
+
+    <!-- Slide 30 -->
+    <div class="swiper-slide s6-slide">
+      <img loading="lazy" src="./images/galerry/30.webp" alt="Review 30" class="s6-img">
+    </div>
+
+    <!-- Slide 31 -->
+    <div class="swiper-slide s6-slide" data-video="https://itden-cdn.b-cdn.net/stretching/feur289aew.mp4">
+      <img loading="lazy" src="./images/galerry/31.webp" alt="Review 31" class="s6-img">
+    </div>
+
+    <!-- Slide 32 -->
+    <div class="swiper-slide s6-slide" data-video="https://itden-cdn.b-cdn.net/stretching/vd-11.MP4">
+      <img loading="lazy" src="./images/galerry/32.webp" alt="Review 32" class="s6-img">
+    </div>
+
+    <!-- Slide 33 -->
+    <div class="swiper-slide s6-slide">
+      <img loading="lazy" src="./images/galerry/33.webp" alt="Review 33" class="s6-img">
+    </div>
+
+    <!-- Slide 34 -->
+    <div class="swiper-slide s6-slide" data-video="https://itden-cdn.b-cdn.net/stretching/Splits%20Course%20from%20Zubalenok%20on%20IG.mp4">
+      <img loading="lazy" src="./images/galerry/34.webp" alt="Review 34" class="s6-img">
+    </div>
+
   </div>
+</div>
 
   <!-- Контроли слайдера -->
   <div class="s6-controls">

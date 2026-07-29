@@ -1,17 +1,21 @@
 (function () {
   console.log('[VideoSlides] Script initialized for s6');
 
-  var VIDEO_MAP = {
-    'slide1.webp':  'https://itden-cdn.b-cdn.net/3-in-1_new/slider-3/1.MP4',
-    'slide3.webp':  'https://itden-cdn.b-cdn.net/3-in-1_new/slider-3/3.MP4',
-    'slide4.webp':  'https://itden-cdn.b-cdn.net/3-in-1_new/slider-3/4.MP4',
-    'slide8.webp':  'https://itden-cdn.b-cdn.net/3-in-1_new/slider-3/8.MP4',
-    'slide13.webp': 'https://itden-cdn.b-cdn.net/3-in-1_new/slider-3/13.MP4',
-    'slide16.webp': 'https://itden-cdn.b-cdn.net/3-in-1_new/slider-3/16.MP4',
-    'slide17.webp': 'https://itden-cdn.b-cdn.net/3-in-1_new/slider-3/17.MP4',
-    'slide18.webp': 'https://itden-cdn.b-cdn.net/3-in-1_new/slider-3/19.MP4',
-    'slide20.webp': 'https://itden-cdn.b-cdn.net/3-in-1_new/slider-3/20.MP4'
-  };
+var VIDEO_MAP = {
+  '1.webp':  'https://itden-cdn.b-cdn.net/stretching/sdk23o.MP4',
+  '4.webp':  'https://itden-cdn.b-cdn.net/stretching/vd-2.mp4',
+  '8.webp':  'https://itden-cdn.b-cdn.net/stretching/vd-3.mp4',
+  '13.webp': 'https://itden-cdn.b-cdn.net/stretching/vd-4.mp4',
+  '18.webp': 'https://itden-cdn.b-cdn.net/stretching/video2.MP4',
+  '21.webp': 'https://itden-cdn.b-cdn.net/stretching/video4.MP4',
+  '24.webp': 'https://itden-cdn.b-cdn.net/stretching/Instagram_15.04.2026_MiddleSplit_Video.mp4',
+  '25.webp': 'https://itden-cdn.b-cdn.net/stretching/video5.MP4',
+  '27.webp': 'https://itden-cdn.b-cdn.net/stretching/Instagram_15.04.2026_FullSplit_Video.MP4',
+  '29.webp': 'https://itden-cdn.b-cdn.net/stretching/vd-10.mp4',
+  '31.webp': 'https://itden-cdn.b-cdn.net/stretching/feur289aew.mp4',
+  '32.webp': 'https://itden-cdn.b-cdn.net/stretching/vd-11.MP4',
+  '34.webp': 'https://itden-cdn.b-cdn.net/stretching/Splits%20Course%20from%20Zubalenok%20on%20IG.mp4'
+};
 
   // 1. Ініціалізація Swiper Слайдера
   function initSwiper() {
