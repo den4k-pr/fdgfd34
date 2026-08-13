@@ -1570,7 +1570,7 @@ background: linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255,
 
 .footer-cta-button {
   width: 329px;
-  height: 67px;
+  height: 80px;
   border-radius: 100px;
   background: url(../images/Button.png) no-repeat;
   background-size: 100% 100%;
@@ -1583,6 +1583,7 @@ background: linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255,
   align-items: center;
   margin-top: 23px;
   padding-top: 2px;
+  padding-bottom: 5px;
 }
 
 .cta-text-main {
