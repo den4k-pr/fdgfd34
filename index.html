@@ -15,14 +15,13 @@
     <link rel="icon" type="image/png" href="./images/favicon.png">
     <link rel="preconnect" href="https://itden-cdn.b-cdn.net" crossorigin>
     
-    <link rel="stylesheet" href="./css/nullStyle.css">
-    <link rel="stylesheet" href="./css/main.css?v=6">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <title>Summer Body Fit Reset</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Aclonica&family=Kalam&family=League+Gothic&family=Outfit:wght@600;700&family=Righteous&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Aclonica&family=Kalam&family=League+Gothic&family=Oswald:wght@400;500;600;700&family=Outfit:wght@600;700&family=Righteous&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/nullStyle.css">
+    <link rel="stylesheet" href="./css/main.css?v=6">
 
   <script id="usercentrics-cmp" src="https://web.cmp.usercentrics.eu/ui/loader.js" data-settings-id="XqcGcxfjgSHY_k" async></script>
     <meta
@@ -35,127 +34,550 @@
         function updateTomorrowDate() {
             var el = document.getElementById('tomorrow');
             if (!el) return;
+            
             var tomorrow = new Date();
             tomorrow.setDate(tomorrow.getDate() + 1);
-            var day = tomorrow.getDate();
-            var months = ['JANUARY','FEBRUARY','MARCH','APRIL','MAY','JUNE','JULY','AUGUST','SEPTEMBER','OCTOBER','NOVEMBER','DECEMBER'];
-            el.textContent = day + ' ' + months[tomorrow.getMonth()];
+            
+            var day = String(tomorrow.getDate()).padStart(2, '0');
+            var month = String(tomorrow.getMonth() + 1).padStart(2, '0');
+            var year = tomorrow.getFullYear();
+            
+            el.textContent = day + '.' + month + '.' + year;
         }
+        
         if (document.readyState === 'loading') {
             document.addEventListener('DOMContentLoaded', updateTomorrowDate);
         } else {
             updateTomorrowDate();
         }
     })();
-    </script>
+</script>
 
 </head>
 <body>
     <div class="wrapper">
-<div class="s25">
+<div class="s1">
+  <!-- Основний фон, який містить дівчину, заголовки та плашки під ціни -->
+  <img class="s1-bg" src="./images/img27.webp" alt="Background" />
   
-  <!-- Шапка -->
-  <div class="s25-header">
-    <h2 class="s25-title">
-      EVERYTHING<br>
-      <span class="s25-title-red">YOU GET TODAY</span>
-    </h2>
-
-    <div class="s25-top-badge">
-      <img src="./images/img5.webp" class="s25-badge-icon" alt="">
-      <span class="s25-badge-text">Today Only, We Include These 3 Extras</span>
+  <!-- Верхня плашка (Pill) -->
+  <div class="s1-pill-wrapper">
+    <div class="s1-pill">
+      <div class="s1-pill-text">9 weeks access</div>
+      <img class="s1-calendar" src="./images/img29.webp" alt="Calendar" />
+      <div class="s1-pill-text">start: <span id="tomorrow"></span></div>
     </div>
-
-    <p class="s25-subtext">
-      Instead of purchasing them separately later, you'll <br> receive them <strong>FREE</strong> when you unlock <br><strong>LIFETIME ACCESS TODAY</strong>
-    </p>
   </div>
 
-  <!-- Список продуктів -->
-  <div class="s25-cards-list">
+  <!-- Нова ціна (лише текст, позиціонований поверх фону) -->
+  <div class="s1-new-price-wrapper">
+    <div class="s1-new-price-label">Exclusive<br/>Offer</div>
+    <div class="s1-new-price-val">19€</div>
+  </div>
+
+  <!-- Стара ціна (лише текст, позиціонований поверх фону) -->
+  <div class="s1-old-price-wrapper">
+    <div class="s1-old-price-label">Was</div>
+    <div class="s1-old-price-val">129€</div>
+  </div>
+
+  <!-- Нижній блок з кнопкою та текстом -->
+  <div class="s1-footer">
+    <div class="s1-btn-shadow">
+      <div class="s1-btn">
+        <div class="s1-btn-text">get your transformation</div>
+      </div>
+    </div>
+    <div class="s1-footer-text">СLEAR PATH FOR YOUR BODY is waiting!</div>
+  </div>
+</div>
+
+<div class="s2">
+  <div class="s2-header">
+    <div class="s2-bonus-pill">
+      <img class="s2-diamond-icon" src="./images/img31.webp" alt="Diamond" />
+      <div class="s2-bonus-text">Bonus</div>
+    </div>
+    <div class="s2-header-text">only for those, who join Today!</div>
+  </div>
+  
+  <div class="s2-content">
+    <div class="s2-text-group">
+      <div class="s2-title">
+        <span class="s2-title-white">2 CORE<br/></span>
+        <span class="s2-title-yellow">ACTIVATION<br/></span>
+        <span class="s2-title-white">SESSIONS &nbsp;</span>
+      </div>
+      <div class="s2-subtitle">
+        <span class="s2-subtitle-light">Flexibility + Strength = <br> </span><span class="s2-subtitle-bold">Long Term Results</span>
+      </div>
+    </div>
     
+    <img class="s2-composite-img" src="./images/img20.webp" alt="App Preview" />
+  </div>
+</div>
+
+
+<div class="s3">
+  <div class="s3-title">
+    <span class="s3-title-dark">UPGRADED BESTSELLER<br/>WHERE YOUR BODY </span>
+    <span class="s3-title-pink">CHANGES</span>
+  </div>
+
+  <div class="s3-columns">
+    <!-- Ліва колонка (Проблема) -->
+    <div class="s3-col-left">
+      <img class="s3-img" src="./images/img16.webp" alt="Stiff body" />
+      
+      <div class="s3-item">
+        <img class="s3-icon" src="./images/img13.webp" alt="No" />
+        <div class="s3-text s3-text-left">Stuck & Stiff Body?</div>
+      </div>
+      <div class="s3-item">
+        <img class="s3-icon" src="./images/img13.webp" alt="No" />
+        <div class="s3-text s3-text-left">Always Tight<br/>& Tired?</div>
+      </div>
+      <div class="s3-item">
+        <img class="s3-icon" src="./images/img13.webp" alt="No" />
+        <div class="s3-text s3-text-left">Guessing where to start?</div>
+      </div>
+      <div class="s3-item">
+        <img class="s3-icon" src="./images/img13.webp" alt="No" />
+        <div class="s3-text s3-text-left">Struggling to<br/>lose weight or<br/>progress in exercises?</div>
+      </div>
+    </div>
+
+    <!-- Права колонка (Рішення) -->
+    <div class="s3-col-right">
+      <img class="s3-img" src="./images/img15.webp" alt="Flexible body" />
+      
+      <div class="s3-item">
+        <img class="s3-icon" src="./images/img14.webp" alt="Yes" />
+        <div class="s3-text s3-text-right">Just 15 min daily</div>
+      </div>
+      <div class="s3-item">
+        <img class="s3-icon" src="./images/img14.webp" alt="Yes" />
+        <div class="s3-text s3-text-right">Full Body<br/>Flexibility Program</div>
+      </div>
+      <div class="s3-item">
+        <img class="s3-icon" src="./images/img14.webp" alt="Yes" />
+        <div class="s3-text s3-text-right">Move & Train Pain-free</div>
+      </div>
+      <div class="s3-item">
+        <img class="s3-icon" src="./images/img14.webp" alt="Yes" />
+        <div class="s3-text s3-text-right">Flexibility is<br/>a key to your<br/>body boost!</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="s4">
+  <div class="s4-card">
+    <div class="s4-title">MONEY-BACK GUARANTEE!</div>
+    <div class="s4-content">
+      <div class="s4-text-group">
+        <div class="s4-subtitle">NOT SURE?</div>
+        <div class="s4-desc">We offer a 14-day money-back guarantee if the course doesn’t meet your expectations</div>
+      </div>
+      <img class="s4-badge" src="./images/img28.webp" alt="14 Days Guaranteed" />
+    </div>
+  </div>
+</div>
+
+
+<div class="s5">
+  <div class="s5-title">Check what is inside!</div>
+  
+  <div class="s5-cards">
     <!-- Картка 1 -->
-    <div class="s25-card s25-card-1">
-      <div class="s25-card-content">
-        <h3 class="s25-card-title">ANTI-BLOAT ROUTINE</h3>
-        <p class="s25-card-desc">
-          10-minute routines to help reduce puffiness and heaviness and make your body feel lighter.
-        </p>
+    <div class="s5-card">
+      <div class="s5-icon-bg">
+        <img class="s5-icon" src="./images/img22.webp" alt="Calendar">
       </div>
+      <div class="s5-val">9</div>
+      <div class="s5-label">Weeks Access</div>
+      <div class="s5-line"></div>
     </div>
-
+    
     <!-- Картка 2 -->
-    <div class="s25-card s25-card-2">
-      <div class="s25-card-content">
-        <h3 class="s25-card-title">INHOME POWER</h3>
-        <p class="s25-card-desc">
-          Karyna’s at-home glute program for stronger, more powerful legs while you work toward your splits
-        </p>
+    <div class="s5-card">
+      <div class="s5-icon-bg">
+        <img class="s5-icon" src="./images/img23.webp" alt="Play">
       </div>
+      <div class="s5-val">40+</div>
+      <div class="s5-label">Lessons</div>
+      <div class="s5-line"></div>
     </div>
-
+    
     <!-- Картка 3 -->
-    <div class="s25-card s25-card-3">
-      <div class="s25-card-content">
-        <h3 class="s25-card-title">ZUBALENOK COMMUNITY</h3>
-        <p class="s25-card-desc">
-          Train alongside women working toward the same goals, with support from Karyna, her team, and the community
-        </p>
+    <div class="s5-card">
+      <div class="s5-icon-bg">
+        <img class="s5-icon s5-icon-dumbbell" src="./images/img24.webp" alt="Dumbbell">
+      </div>
+      <div class="s5-val">110+</div>
+      <div class="s5-label">Unique Exercises</div>
+      <div class="s5-line"></div>
+    </div>
+  </div>
+  
+  <!-- Картка з бонусом -->
+  <div class="s5-bonus">
+    <div class="s5-bonus-content">
+      <div class="s5-bonus-val">+2</div>
+      <div class="s5-bonus-label">Bonus<br/>Core<br/>Lessons</div>
+    </div>
+    <img class="s5-bonus-img" src="./images/img21.webp" alt="Bonus Lessons" />
+  </div>
+  
+  <!-- Футер секції -->
+  <div class="s5-footer">
+    <img class="s5-heart-icon" src="./images/img25.webp" alt="Heart" />
+    <div class="s5-footer-text">Daily Support Available</div>
+  </div>
+</div>
+
+
+<div class="s6">
+  <div class="s6-grid">
+    
+    <!-- Картка 1: Day 1 -->
+    <div class="s6-card video-card-item">
+      <div class="s6-day">Day 1</div>
+      <div class="s6-video-wrapper video-wrapper-small">
+        <video class="video-player s6-video" data-src="https://itden-cdn.b-cdn.net/splits/1.mp4" poster="./images/img6.webp" playsinline loop muted preload="none"></video>
+      </div>
+      <ul class="s6-list">
+        <li>
+          <span class="s6-text-pink">Less stiffness</span> 
+          <span class="s6-text-dark">in hips & lower back</span>
+        </li>
+        <li>
+          <span class="s6-text-dark">Body feels lighter</span> 
+          <span class="s6-text-pink">after 1st training</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Картка 2: Day 11 -->
+    <div class="s6-card video-card-item">
+      <div class="s6-day">Day 11</div>
+      <div class="s6-video-wrapper video-wrapper-small">
+        <video class="video-player s6-video" data-src="https://itden-cdn.b-cdn.net/splits/jjj2.mp4" poster="./images/img7.webp" playsinline loop muted preload="none"></video>
+      </div>
+      <ul class="s6-list">
+        <li style="color: #000;">
+          <span class="s6-text-dark">Transitions become effortless</span>
+        </li>
+        <li style="color: #000;">
+          <span class="s6-text-pink">Hip release, smooth movements</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Картка 3: Day 24 -->
+    <div class="s6-card video-card-item">
+      <div class="s6-day">Day 24</div>
+      <div class="s6-video-wrapper video-wrapper-small">
+        <video class="video-player s6-video" data-src="https://itden-cdn.b-cdn.net/splits/jjj3.mp4" poster="./images/img8.webp" playsinline loop muted preload="none"></video>
+      </div>
+      <ul class="s6-list">
+        <li style="color: #000;">
+          <span class="s6-text-dark">Deeper stretches</span> 
+          <span class="s6-text-pink">without pain</span>
+        </li>
+        <li style="color: #000;">
+          <span class="s6-text-pink">Better posture & core control</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Картка 4: Day 42 -->
+    <div class="s6-card video-card-item">
+      <div class="s6-day">Day 42</div>
+      <div class="s6-video-wrapper video-wrapper-small">
+        <video class="video-player s6-video" data-src="https://itden-cdn.b-cdn.net/splits/4.mp4" poster="./images/img9.webp" playsinline loop muted preload="none"></video>
+      </div>
+      <ul class="s6-list">
+        <li style="color: #000;">
+          <span class="s6-text-dark">Full-body wide range of movement with</span> 
+          <span class="s6-text-pink">strength, control, & stability</span>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="s7">
+  <div class="s7-title">OUR STUDENTS RESULTS</div>
+  
+  <!-- Слайдер -->
+  <div class="swiper s7-swiper">
+    <div class="swiper-wrapper">
+      
+      <!-- Слайд 1 (Відео) -->
+      <div class="swiper-slide s7-slide" data-video="https://itden-cdn.b-cdn.net/stiff/hz-2-1.MP4">
+        <img class="s7-img" src="./images/slider/hz-2-1.webp" alt="Result 1">
+        <img class="s7-play-btn" src="./images/img1.webp" alt="Play">
+      </div>
+      
+      <!-- Слайд 2 (Відео) -->
+      <div class="swiper-slide s7-slide" data-video="https://itden-cdn.b-cdn.net/stiff/hz-2-2.MP4">
+        <img class="s7-img" src="./images/slider/hz-2-2.webp" alt="Result 2">
+        <img class="s7-play-btn" src="./images/img1.webp" alt="Play">
+      </div>
+      
+      <!-- Слайд 3 (Відео) -->
+      <div class="swiper-slide s7-slide" data-video="https://itden-cdn.b-cdn.net/stiff/hz-2-3.MP4">
+        <img class="s7-img" src="./images/slider/hz-2-3.webp" alt="Result 3">
+        <img class="s7-play-btn" src="./images/img1.webp" alt="Play">
+      </div>
+      
+      <!-- Слайд 4 (Відео) -->
+      <div class="swiper-slide s7-slide" data-video="https://itden-cdn.b-cdn.net/stiff/hz-2-4.MP4">
+        <img class="s7-img" src="./images/slider/hz-2-4.webp" alt="Result 4">
+        <img class="s7-play-btn" src="./images/img1.webp" alt="Play">
+      </div>
+      
+      <!-- Слайд 5 (Відео) -->
+      <div class="swiper-slide s7-slide" data-video="https://itden-cdn.b-cdn.net/stiff/hz-2-5.MP4">
+        <img class="s7-img" src="./images/slider/hz-2-5.webp" alt="Result 5">
+        <img class="s7-play-btn" src="./images/img1.webp" alt="Play">
+      </div>
+      
+      <!-- Слайд 6 (Фото) -->
+      <div class="swiper-slide s7-slide">
+        <img class="s7-img" src="./images/slider/hz-2-6.webp" alt="Result 6">
+      </div>
+      
+      <!-- Слайд 7 (Фото) -->
+      <div class="swiper-slide s7-slide">
+        <img class="s7-img" src="./images/slider/hz-2-7.webp" alt="Result 7">
+      </div>
+      
+      <!-- Слайд 8 (Фото) -->
+      <div class="swiper-slide s7-slide">
+        <img class="s7-img" src="./images/slider/hz-2-8.webp" alt="Result 8">
+      </div>
+      
+      <!-- Слайд 9 (Фото) -->
+      <div class="swiper-slide s7-slide">
+        <img class="s7-img" src="./images/slider/hz-2-9.webp" alt="Result 9">
+      </div>
+      
+      <!-- Слайд 10 (Відео) -->
+      <div class="swiper-slide s7-slide" data-video="https://itden-cdn.b-cdn.net/3-in-1_new/slider-3/8.MP4">
+        <img class="s7-img" src="./images/slider/hz-2-10.webp" alt="Result 10">
+        <img class="s7-play-btn" src="./images/img1.webp" alt="Play">
+      </div>
+      
+      <!-- Слайд 11 (Відео) -->
+      <div class="swiper-slide s7-slide" data-video="https://itden-cdn.b-cdn.net/3-in-1_new/slider-3/3.MP4">
+        <img class="s7-img" src="./images/slider/hz-2-11.webp" alt="Result 11">
+        <img class="s7-play-btn" src="./images/img1.webp" alt="Play">
+      </div>
+      
+      <!-- Слайд 12 (Фото) -->
+      <div class="swiper-slide s7-slide">
+        <img class="s7-img" src="./images/slider/hz-2-12.webp" alt="Result 12">
+      </div>
+      
+      <!-- Слайд 13 (Фото) -->
+      <div class="swiper-slide s7-slide">
+        <img class="s7-img" src="./images/slider/hz-2-13.webp" alt="Result 13">
+      </div>
+      
+      <!-- Слайд 14 (Фото) -->
+      <div class="swiper-slide s7-slide">
+        <img class="s7-img" src="./images/slider/hz-2-14.webp" alt="Result 14">
+      </div>
+      
+      <!-- Слайд 15 (Фото) -->
+      <div class="swiper-slide s7-slide">
+        <img class="s7-img" src="./images/slider/hz-2-15.webp" alt="Result 15">
+      </div>
+      
+      <!-- Слайд 16 (Відео) -->
+      <div class="swiper-slide s7-slide" data-video="https://itden-cdn.b-cdn.net/3-in-1_new/slider-3/13.MP4">
+        <img class="s7-img" src="./images/slider/hz-2-16.webp" alt="Result 16">
+        <img class="s7-play-btn" src="./images/img1.webp" alt="Play">
+      </div>
+      
+      <!-- Слайд 17 (Фото) -->
+      <div class="swiper-slide s7-slide">
+        <img class="s7-img" src="./images/slider/hz-2-17.webp" alt="Result 17">
+      </div>
+      
+      <!-- Слайд 18 (Відео) -->
+      <div class="swiper-slide s7-slide" data-video="https://itden-cdn.b-cdn.net/3-in-1_new/slider-3/1.MP4">
+        <img class="s7-img" src="./images/slider/hz-2-18.webp" alt="Result 18">
+        <img class="s7-play-btn" src="./images/img1.webp" alt="Play">
+      </div>
+      
+      <!-- Слайд 19 (Фото) -->
+      <div class="swiper-slide s7-slide">
+        <img class="s7-img" src="./images/slider/hz-2-19.webp" alt="Result 19">
+      </div>
+      
+      <!-- Слайд 20 (Відео) -->
+      <div class="swiper-slide s7-slide" data-video="https://itden-cdn.b-cdn.net/3-in-1_new/slider-3/4.MP4">
+        <img class="s7-img" src="./images/slider/hz-2-20.webp" alt="Result 20">
+        <img class="s7-play-btn" src="./images/img1.webp" alt="Play">
+      </div>
+      
+      <!-- Слайд 21 (Фото) -->
+      <div class="swiper-slide s7-slide">
+        <img class="s7-img" src="./images/slider/hz-2-21.webp" alt="Result 21">
+      </div>
+      
+      <!-- Слайд 22 (Фото) -->
+      <div class="swiper-slide s7-slide">
+        <img class="s7-img" src="./images/slider/hz-2-23.webp" alt="Result 22">
+      </div>
+      
+    </div>
+  </div>
+  
+  <!-- Бейдж -->
+  <div class="s7-badge">+12K Beginners to Advanced</div>
+  
+  <!-- Контроли слайдера -->
+  <div class="s7-controls">
+    <div class="s7-pagination"></div>
+    <div class="s7-nav">
+      <div class="s7-prev">
+        <img src="./images/img26.webp" style="transform: rotate(180deg);" alt="">
+      </div>
+      <div class="s7-next">
+        <img src="./images/img26.webp" alt="">
       </div>
     </div>
-
   </div>
-
-  <!-- Нижня підсумкова плашка -->
-  <div class="s25-total-box">
-    <h3 class="s25-total-title">4 PROGRAMS AND COMMUNITY.<br>ONE PAYMENT. YOURS FOR LIFE.</h3>
-    <p class="s25-total-sub">No subscription. No renewal. No deadline to finish.</p>
-    
-    <div class="s25-price-pill">
-      <div class="s25-price-label">Get everything<br>today for</div>
-      <div class="s25-price-val">99€</div>
-    </div>
-  </div>
-
 </div>
 
-<img src="./images/gurante.webp" alt="">
 
-<div class="s26">
+
+<div class="s8">
+  <div class="s8-inner">
+    
+    <!-- Заголовок -->
+    <div class="s8-title">
+      <span class="s8-title-dark">why this course will<br/></span>
+      <span class="s8-title-pink">change your life</span>
+    </div>
+    
+    <!-- Три картки переваг -->
+    <div class="s8-features">
+      <div class="s8-feature-card">
+        <img class="s8-icon" src="./images/img17.webp" alt="Access" />
+        <div class="s8-feature-text">6 weeks<br/>of access</div>
+      </div>
+      
+      <div class="s8-feature-card">
+        <img class="s8-icon" src="./images/img18.webp" alt="Support" />
+        <div class="s8-feature-text">Support during<br/>& after course!</div>
+      </div>
+      
+      <div class="s8-feature-card">
+        <img class="s8-icon" src="./images/img19.webp" alt="Community" />
+        <div class="s8-feature-text">Community<br/>+ updates</div>
+      </div>
+    </div>
+    
+    <!-- Підзаголовок -->
+    <div class="s8-subtitle">Your Full Body Upgrade!</div>
+    
+    <!-- Блок з фотографією та бульбашками -->
+    <div class="s8-image-wrapper">
+      <img class="s8-main-img" src="./images/img4.webp" alt="Full body stretch" />
+      
+      <div class="s8-bubble s8-bubble-1">Release tension,<br/>improve posture</div>
+      <div class="s8-bubble s8-bubble-2">Open chest and get<br/>lean core</div>
+      <div class="s8-bubble s8-bubble-3">Improve joints mobility</div>
+      <div class="s8-bubble s8-bubble-4">Unlock tight hips</div>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="s9">
+  <div class="s9-title">Can’t wait to see <br/>you on course!</div>
   
-  <!-- Заголовок -->
-  <div class="s26-header">
-    <h2 class="s26-title">
-      AND <span class="s26-title-red">YOU’RE PROTECTED</span> BY OUR<br>4-WEEK GUARANTEE
-    </h2>
+  <div class="s9-video-placeholder">
+    <img class="s9-play-btn" src="./images/img1.webp" alt="Play Video" />
   </div>
-
-  <!-- Картка з плашкою та текстом -->
-  <div class="s26-stamp-card">
-    
-    <!-- Текст поруч із значком 4-Weeks Guaranteed -->
-    <p class="s26-top-text">
-      I've helped thousands of women achieve their splits
-    </p>
-
-    <!-- Основний текст гарантії -->
-    <div class="s26-body-text">
-      <p>
-        That's why I'm willing to take all the risk. All I ask is that you <strong>follow the program exactly as it's designed</strong> for your first four weeks. And <strong>I am confident you will see first results.</strong>
-      </p>
-      <p>
-        If you actively follow the program - and don't see significant progress toward your splits - <strong>I'll refund your full €99.</strong>
-      </p>
-      <p>
-        If this program doesn't bring you closer to your goal, you shouldn't have to pay for it.
-      </p>
-    </div>
-
-  </div>
-
 </div>
 
+<img src="./images/img12.webp" alt="">
 
+<div class="s10">
+  <div class="s10-inner">
+    <div class="s10-title">WHY CHOOSING<br/>THIS PROGRAM?</div>
+
+    <div class="s10-list">
+      <!-- Item 1 -->
+      <div class="s10-item">
+        <div class="s10-question">Q: Don't Know How & Where?</div>
+        <div class="s10-answer">
+          <div class="s10-img-wrapper">
+            <img class="s10-img" src="./images/img32.webp" alt="Devices" />
+          </div>
+          <div class="s10-text-group">
+            <div class="s10-text-title">Start Anywhere. On any device.</div>
+            <div class="s10-text-desc">Get Instant Mail Access. Just You, your mat & yoga blocks</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="s10-item">
+        <div class="s10-question">Q: Hard to find time for your body?</div>
+        <div class="s10-answer">
+          <div class="s10-img-wrapper">
+            <img class="s10-img" src="./images/img3.webp" alt="Clock" />
+          </div>
+          <div class="s10-text-group">
+            <div class="s10-text-title">Train in just 15 minutes a day</div>
+            <div class="s10-text-desc">Short, focused sessions to fit into real life - no gym, no pressure</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="s10-item">
+        <div class="s10-question">Q: Afraid of starting from zero?</div>
+        <div class="s10-answer">
+          <div class="s10-img-wrapper">
+            <img class="s10-img" src="./images/img5.webp" alt="Yoga Mat" />
+          </div>
+          <div class="s10-text-group">
+            <div class="s10-text-title">Built for stiff bodies</div>
+            <div class="s10-text-desc">You don’t need flexibility to begin. The program meets you where you are</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="s10-item">
+        <div class="s10-question">Q: Want one program that actually makes sense?</div>
+        <div class="s10-answer">
+          <div class="s10-img-wrapper">
+            <img class="s10-img" src="./images/img2.webp" alt="Checklist" />
+          </div>
+          <div class="s10-text-group">
+            <div class="s10-text-title">Full-body, guided structure</div>
+            <div class="s10-text-desc">Everything is planned for you - follow the sessions and let your body adapt</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>
 
 <div class="faq-section">
   <div class="s7">
@@ -163,36 +585,20 @@
     
     <div class="s7__container">
 
-      <!-- Питання 1 -->
-      <div class="s7__item">
-        <div class="s7__question">
-          <div class="s7__q-icon"><img src="./images/q.webp" alt="Q"></div>
-          <span class="s7__q-text">Is this really one payment?</span>
-          <div class="s7__arrow"><img src="./images/img21.webp" alt="arrow"></div>
-        </div>
-        <div class="s7__answer">
-          <div class="s7__answer-inner">
-            <div class="s7__answer-bubble">
-              Yes. You pay 99€ once and both courses are yours forever. No subscription, nothing renews, nothing to cancel.
-            </div>
-            <img src="./images/img8.webp" alt="Karyna" class="s7__avatar">
-          </div>
-        </div>
-      </div>
 
       <!-- Питання 2 -->
       <div class="s7__item">
         <div class="s7__question">
           <div class="s7__q-icon"><img src="./images/q.webp" alt="Q"></div>
-          <span class="s7__q-text">What does lifetime access mean?</span>
-          <div class="s7__arrow"><img src="./images/img21.webp" alt="arrow"></div>
+          <span class="s7__q-text">I can barely touch my toes. Is this too advanced for me?</span>
+          <div class="s7__arrow"><img src="./images/img30.webp" alt="arrow"></div>
         </div>
         <div class="s7__answer">
           <div class="s7__answer-inner">
             <div class="s7__answer-bubble">
-              As long as the courses exist, you have them. Train now, pause, come back in a year – your access never expires.
+              Not at all. 80% of students start exactly where you are. The program meets you at your level.
             </div>
-            <img src="./images/img8.webp" alt="Karyna" class="s7__avatar">
+            <img src="./images/img11.webp" alt="Karyna" class="s7__avatar">
           </div>
         </div>
       </div>
@@ -201,15 +607,15 @@
       <div class="s7__item">
         <div class="s7__question">
           <div class="s7__q-icon"><img src="./images/q.webp" alt="Q"></div>
-          <span class="s7__q-text">Will I be charged again after I pay?</span>
-          <div class="s7__arrow"><img src="./images/img21.webp" alt="arrow"></div>
+          <span class="s7__q-text">Can I use the course on my tablet / PC / TV?</span>
+          <div class="s7__arrow"><img src="./images/img30.webp" alt="arrow"></div>
         </div>
         <div class="s7__answer">
           <div class="s7__answer-inner">
             <div class="s7__answer-bubble">
-              No. This is a one-time payment. You will never be charged automatically.
+              The methods for streaming videos to your TV depend on the type of device and the platform you’re registered on. Most commonly, you can use one of the following options:<br><br>1. Through a Smart TV browser<br>2. Through your phone or laptop + Smart TV (using the “Cast” or “Screen Mirroring” function)<br>3. Through an HDMI cable<br><br>Access from a PC is also available, simply open the link to the platform from your email on your computer.
             </div>
-            <img src="./images/img8.webp" alt="Karyna" class="s7__avatar">
+            <img src="./images/img11.webp" alt="Karyna" class="s7__avatar">
           </div>
         </div>
       </div>
@@ -218,15 +624,15 @@
       <div class="s7__item">
         <div class="s7__question">
           <div class="s7__q-icon"><img src="./images/q.webp" alt="Q"></div>
-          <span class="s7__q-text">I’ve never stretched before. Is it too hard for me?</span>
-          <div class="s7__arrow"><img src="./images/img21.webp" alt="arrow"></div>
+          <span class="s7__q-text">Can I get a refund if I don't like the course?</span>
+          <div class="s7__arrow"><img src="./images/img30.webp" alt="arrow"></div>
         </div>
         <div class="s7__answer">
           <div class="s7__answer-inner">
             <div class="s7__answer-bubble">
-              The program starts with 3 beginner lessons and day-1 adaptation. It’s built for complete beginners, step by step.
+              Yes, we offer a 14-day money-back guarantee if you’re not satisfied.
             </div>
-            <img src="./images/img8.webp" alt="Karyna" class="s7__avatar">
+            <img src="./images/img11.webp" alt="Karyna" class="s7__avatar">
           </div>
         </div>
       </div>
@@ -235,15 +641,15 @@
       <div class="s7__item">
         <div class="s7__question">
           <div class="s7__q-icon"><img src="./images/q.webp" alt="Q"></div>
-          <span class="s7__q-text">How long until I see results?</span>
-          <div class="s7__arrow"><img src="./images/img21.webp" alt="arrow"></div>
+          <span class="s7__q-text">What are the terms of the money-back guarantee?</span>
+          <div class="s7__arrow"><img src="./images/img30.webp" alt="arrow"></div>
         </div>
         <div class="s7__answer">
           <div class="s7__answer-inner">
             <div class="s7__answer-bubble">
-              With consistent practice you’ll feel noticeable progress in 2-4 weeks. And with lifetime access, there’s no deadline pressure.
+              Just mail <a href="https://www.instagram.com/zubalenok.team/">support_zubalenok@zbl.agency or DM @zubalenok.team.</a> Provide your Name, Surname, invoice and we will help you out. Refunds take 5-10 days to get proceeded.
             </div>
-            <img src="./images/img8.webp" alt="Karyna" class="s7__avatar">
+            <img src="./images/img11.webp" alt="Karyna" class="s7__avatar">
           </div>
         </div>
       </div>
@@ -252,15 +658,15 @@
       <div class="s7__item">
         <div class="s7__question">
           <div class="s7__q-icon"><img src="./images/q.webp" alt="Q"></div>
-          <span class="s7__q-text">How much time do I need per day?</span>
-          <div class="s7__arrow"><img src="./images/img21.webp" alt="arrow"></div>
+          <span class="s7__q-text">Do I need special equipment to participate in the course?</span>
+          <div class="s7__arrow"><img src="./images/img30.webp" alt="arrow"></div>
         </div>
         <div class="s7__answer">
           <div class="s7__answer-inner">
             <div class="s7__answer-bubble">
-              20-30 minutes. Every lesson is fully planned with on-screen timers.
+              You'll only need comfortable workout clothes, a mat for exercises and yoga blocks to make workouts easier.
             </div>
-            <img src="./images/img8.webp" alt="Karyna" class="s7__avatar">
+            <img src="./images/img11.webp" alt="Karyna" class="s7__avatar">
           </div>
         </div>
       </div>
@@ -269,15 +675,15 @@
       <div class="s7__item">
         <div class="s7__question">
           <div class="s7__q-icon"><img src="./images/q.webp" alt="Q"></div>
-          <span class="s7__q-text">Do I need special equipment?</span>
-          <div class="s7__arrow"><img src="./images/img21.webp" alt="arrow"></div>
+          <span class="s7__q-text">I don't have yoga blocks. What can I use instead?</span>
+          <div class="s7__arrow"><img src="./images/img30.webp" alt="arrow"></div>
         </div>
         <div class="s7__answer">
           <div class="s7__answer-inner">
             <div class="s7__answer-bubble">
-              Just a mat and yoga blocks. Everything is designed for home training.
+              Thick books, sturdy boxes, stacks of folded towels, or firm cushions all work.
             </div>
-            <img src="./images/img8.webp" alt="Karyna" class="s7__avatar">
+            <img src="./images/img11.webp" alt="Karyna" class="s7__avatar">
           </div>
         </div>
       </div>
@@ -286,15 +692,15 @@
       <div class="s7__item">
         <div class="s7__question">
           <div class="s7__q-icon"><img src="./images/q.webp" alt="Q"></div>
-          <span class="s7__q-text">How do I get my gift (InHome Power)?</span>
-          <div class="s7__arrow"><img src="./images/img21.webp" alt="arrow"></div>
+          <span class="s7__q-text">Is this the same as Only Flexibility 2.0?</span>
+          <div class="s7__arrow"><img src="./images/img30.webp" alt="arrow"></div>
         </div>
         <div class="s7__answer">
           <div class="s7__answer-inner">
             <div class="s7__answer-bubble">
-              Access to your courses and the gift arrives in one email right after payment.
+              No It’s a brand new course. Upgraded version with refined techniques, better structure, and new bonus content based on our students feedback and wishes.
             </div>
-            <img src="./images/img8.webp" alt="Karyna" class="s7__avatar">
+            <img src="./images/img11.webp" alt="Karyna" class="s7__avatar">
           </div>
         </div>
       </div>
@@ -303,15 +709,15 @@
       <div class="s7__item">
         <div class="s7__question">
           <div class="s7__q-icon"><img src="./images/q.webp" alt="Q"></div>
-          <span class="s7__q-text">Can I use the courses on my tablet, PC or TV?</span>
-          <div class="s7__arrow"><img src="./images/img21.webp" alt="arrow"></div>
+          <span class="s7__q-text">Is the course suitable for pregnant women?</span>
+          <div class="s7__arrow"><img src="./images/img30.webp" alt="arrow"></div>
         </div>
         <div class="s7__answer">
           <div class="s7__answer-inner">
             <div class="s7__answer-bubble">
-              Yes, on any device through the link in your email. For TV: Smart TV browser, screen mirroring or HDMI.
+              Pregnant women are strongly advised to consult with a doctor before starting the course. While many exercises are safe, it’s important to ensure they are suitable for you.
             </div>
-            <img src="./images/img8.webp" alt="Karyna" class="s7__avatar">
+            <img src="./images/img11.webp" alt="Karyna" class="s7__avatar">
           </div>
         </div>
       </div>
@@ -320,15 +726,15 @@
       <div class="s7__item">
         <div class="s7__question">
           <div class="s7__q-icon"><img src="./images/q.webp" alt="Q"></div>
-          <span class="s7__q-text">Is the course suitable for pregnant women?</span>
-          <div class="s7__arrow"><img src="./images/img21.webp" alt="arrow"></div>
+          <span class="s7__q-text">What are the contraindications for participation?</span>
+          <div class="s7__arrow"><img src="./images/img30.webp" alt="arrow"></div>
         </div>
         <div class="s7__answer">
           <div class="s7__answer-inner">
             <div class="s7__answer-bubble">
-              Please consult a doctor before starting. Many exercises are gentle, but make sure they’re suitable for you.
+              If you have chronic diseases or have recently undergone surgery, please consult a doctor before starting the course. Exercises should not cause pain or discomfort.
             </div>
-            <img src="./images/img8.webp" alt="Karyna" class="s7__avatar">
+            <img src="./images/img11.webp" alt="Karyna" class="s7__avatar">
           </div>
         </div>
       </div>
@@ -337,15 +743,32 @@
       <div class="s7__item">
         <div class="s7__question">
           <div class="s7__q-icon"><img src="./images/q.webp" alt="Q"></div>
-          <span class="s7__q-text">What are the terms of the money-back guarantee?</span>
-          <div class="s7__arrow"><img src="./images/img21.webp" alt="arrow"></div>
+          <span class="s7__q-text">How can I get the most out of the course?</span>
+          <div class="s7__arrow"><img src="./images/img30.webp" alt="arrow"></div>
         </div>
         <div class="s7__answer">
           <div class="s7__answer-inner">
             <div class="s7__answer-bubble">
-              14 days from purchase, full refund, no questions. Just message our support.
+              Follow Karyna’s recommendations, perform the exercises regularly (4-6 times a week), and remember the importance of proper nutrition and rest. Regular practice will lead to the best results.
             </div>
-            <img src="./images/img8.webp" alt="Karyna" class="s7__avatar">
+            <img src="./images/img11.webp" alt="Karyna" class="s7__avatar">
+          </div>
+        </div>
+      </div>
+
+      <!-- Питання 12 -->
+      <div class="s7__item">
+        <div class="s7__question">
+          <div class="s7__q-icon"><img src="./images/q.webp" alt="Q"></div>
+          <span class="s7__q-text">I'm 40+. Will this work for me?</span>
+          <div class="s7__arrow"><img src="./images/img30.webp" alt="arrow"></div>
+        </div>
+        <div class="s7__answer">
+          <div class="s7__answer-inner">
+            <div class="s7__answer-bubble">
+              Age doesn't matter. We have students in their 50s and 60s making incredible progress.
+            </div>
+            <img src="./images/img11.webp" alt="Karyna" class="s7__avatar">
           </div>
         </div>
       </div>
@@ -376,25 +799,27 @@
     <p class="contacts__copyright">© 2026 ,  ZBL COMPANY BV, Roeselare, BE 1022336448</p>
 
     <img src="./images/cards.webp" alt="Payment Methods" class="contacts__payments">
-</section>
-    </div>
+  </section>
+</div>
 </div>
 <div class="footer-bg" id="footer-bg">
   <div class="footer">
     <div class="footer-top-row">
-      <h3 class="footer-title">Your gift expires in:</h3>
-
+      <div class="timer-labels">
+        <span class="timer-label timer-label-hours">hours</span>
+        <span class="timer-label timer-label-minutes">minutes</span>
+        <span class="timer-label timer-label-seconds">seconds</span>
+      </div>
       <div class="footer-timer">
-        <div class="timer-box">00</div>
-        <span class="timer-divider">:</span>
+        <div class="timer-box">23</div>
         <div class="timer-box">59</div>
-        <span class="timer-divider">:</span>
         <div class="timer-box">59</div>
       </div>
     </div>
-
+    
     <button class="footer-cta-button check-click" data-href="https://zubalenok.online/shop/item/13170">
-      UNLOCK LIFETIME ACCESS – 99€
+      <div class="cta-text-main">Yes, - 80% OFF NOW</div>
+      <div class="cta-text-sub">Originally 99€ - now for less than 0,6€/day</div>
     </button>
   </div>
 </div>
@@ -515,7 +940,7 @@
   </script>
     <script src="./js/video-optimize.js?v=5"></script>
     <script src="./js/video-slides.js"></script>
-    <script src="./js/video.js"></script>
+    <script src="./js/anim.js"></script>
     <script src="./js/faq.js"></script>
     <script src="./js/timer.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

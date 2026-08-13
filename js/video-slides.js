@@ -1,36 +1,23 @@
 (function () {
-  console.log('[VideoSlides] Script initialized for s6');
+  console.log('[VideoSlides] Script initialized for s7');
 
-var VIDEO_MAP = {
-  '1.webp':  'https://itden-cdn.b-cdn.net/stretching/sdk23o.MP4',
-  '4.webp':  'https://itden-cdn.b-cdn.net/stretching/vd-2.mp4',
-  '8.webp':  'https://itden-cdn.b-cdn.net/stretching/vd-3.mp4',
-  '13.webp': 'https://itden-cdn.b-cdn.net/stretching/vd-4.mp4',
-  '18.webp': 'https://itden-cdn.b-cdn.net/stretching/video2.MP4',
-  '21.webp': 'https://itden-cdn.b-cdn.net/stretching/video4.MP4',
-  '24.webp': 'https://itden-cdn.b-cdn.net/stretching/Instagram_15.04.2026_MiddleSplit_Video.mp4',
-  '25.webp': 'https://itden-cdn.b-cdn.net/stretching/video5.MP4',
-  '27.webp': 'https://itden-cdn.b-cdn.net/stretching/Instagram_15.04.2026_FullSplit_Video.MP4',
-  '29.webp': 'https://itden-cdn.b-cdn.net/stretching/vd-10.mp4',
-  '31.webp': 'https://itden-cdn.b-cdn.net/stretching/feur289aew.mp4',
-  '32.webp': 'https://itden-cdn.b-cdn.net/stretching/vd-11.MP4',
-  '34.webp': 'https://itden-cdn.b-cdn.net/stretching/Splits%20Course%20from%20Zubalenok%20on%20IG.mp4'
-};
+  // Карта відео (якщо потрібно)
+  var VIDEO_MAP = {};
 
   // 1. Ініціалізація Swiper Слайдера
   function initSwiper() {
-    var gallerySwiperEl = document.querySelector('.s6-swiper');
-    if (gallerySwiperEl) {
+    var gallerySwiperEl = document.querySelector('.s7-swiper');
+    if (gallerySwiperEl && typeof Swiper !== 'undefined') {
       var swiper = new Swiper(gallerySwiperEl, {
-        slidesPerView: 'auto',
+        slidesPerView: 1.3,
         spaceBetween: 20,
         pagination: {
-          el: '.s6-pagination',
+          el: '.s7-pagination',
           clickable: true
         },
         navigation: {
-          nextEl: '.s6-next',
-          prevEl: '.s6-prev'
+          nextEl: '.s7-next',
+          prevEl: '.s7-prev'
         }
       });
 
@@ -39,7 +26,7 @@ var VIDEO_MAP = {
     }
   }
 
-  // 2. Функція витягування посилання на відео з data-video або VIDEO_MAP
+  // 2. Функція витягування посилання на відео з data-video
   function getVideoUrl(slide, img) {
     if (slide) {
       var directUrl = slide.getAttribute('data-video');
@@ -53,15 +40,17 @@ var VIDEO_MAP = {
 
   // 3. Знищення активних плеєрів та відновлення фотографій
   function killAllVideos() {
-    var videos = document.querySelectorAll('.s6-slide video');
+    var videos = document.querySelectorAll('.s7-slide video');
     videos.forEach(function (v) {
       v.pause();
       v.src = '';
       v.load();
-      var parentSlide = v.closest('.s6-slide');
+      var parentSlide = v.closest('.s7-slide');
       if (parentSlide) {
-        var parentImg = parentSlide.querySelector('.s6-img');
+        var parentImg = parentSlide.querySelector('.s7-img');
         if (parentImg) parentImg.style.cssText = '';
+        var playBtn = parentSlide.querySelector('.s7-play-btn');
+        if (playBtn) playBtn.style.display = 'block';
       }
       v.remove();
     });
@@ -74,9 +63,13 @@ var VIDEO_MAP = {
     slide.style.setProperty('position', 'relative', 'important');
     slide.style.setProperty('overflow', 'hidden', 'important');
 
-    var img = slide.querySelector('.s6-img');
+    var img = slide.querySelector('.s7-img');
     if (img) {
       img.style.cssText = 'visibility: hidden !important; opacity: 0 !important;';
+    }
+    var playBtn = slide.querySelector('.s7-play-btn');
+    if (playBtn) {
+      playBtn.style.display = 'none';
     }
 
     var v = document.createElement('video');
@@ -110,10 +103,10 @@ var VIDEO_MAP = {
     document.addEventListener('click', function (e) {
       if (e.target.tagName === 'VIDEO') return;
 
-      var slide = e.target.closest('.s6-slide');
+      var slide = e.target.closest('.s7-slide');
       if (!slide) return;
 
-      var img = slide.querySelector('.s6-img');
+      var img = slide.querySelector('.s7-img');
       var url = getVideoUrl(slide, img);
       
       if (url) {
@@ -125,7 +118,7 @@ var VIDEO_MAP = {
 
     document.addEventListener('touchmove', function (e) {
       if (e.target.tagName === 'VIDEO') return;
-      if (e.target.closest('.s6-slide')) {
+      if (e.target.closest('.s7-slide')) {
         killAllVideos();
       }
     }, { passive: true });

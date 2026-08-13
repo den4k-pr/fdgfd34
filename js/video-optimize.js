@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-
     const LAZY_THRESHOLD = 0.01;
 
     // ==============================================================
@@ -71,7 +70,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (otherOverlay) {
                         const pIcon = otherOverlay.querySelector('.icon-play');
                         const paIcon = otherOverlay.querySelector('.icon-pause');
-                        // ВИПРАВЛЕНО: видалено дублювання .style.style
                         if(pIcon) pIcon.style.display = ''; 
                         if(paIcon) paIcon.style.display = 'none'; 
                     }
@@ -90,7 +88,6 @@ document.addEventListener('DOMContentLoaded', () => {
             // Якщо src ще не підставився через LazyLoad — підставляємо негайно СИНХРОННО
             if (!video.src && video.dataset.src) {
                 video.src = video.dataset.src;
-                // ВИПРАВЛЕНО: прибрано виклик video.load(), щоб мобільні браузери не скидали потік перед стартом
             }
 
             // Звук вмикаємо СИНХРОННО перед викликом play
@@ -99,15 +96,14 @@ document.addEventListener('DOMContentLoaded', () => {
             if (video.paused) {
                 stopAllOthers();
                 
-                // КЛЮЧОВЕ ВИПРАВЛЕННЯ: Викликаємо .play() прямо тут, без canplay лісенерів
+                // Викликаємо .play() прямо тут
                 video.play()
                     .then(() => {
                         setIcon(true);
                     })
                     .catch(err => {
                         console.log('Спроба запуску зі звуком заблокована браузером, вмикаємо без звуку:', err);
-                        // ФОЛБЕК для iOS (на випадок режиму енергозбереження):
-                        // Якщо браузер заборонив звук, запускаємо відео muted (це дозволено завжди)
+                        // ФОЛБЕК для iOS (на випадок режиму енергозбереження)
                         video.muted = true;
                         video.play()
                             .then(() => setIcon(true))
@@ -119,7 +115,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         };
 
-        // Використовуємо pointerdown або click, але без конфліктів тачу
         overlay.addEventListener('click', togglePlay);
 
         // Синхронізація станів через нативні події тегу video
