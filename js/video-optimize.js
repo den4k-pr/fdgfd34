@@ -39,13 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
             overlay.className = 'video-overlay';
             overlay.innerHTML = `
                 <div class="video-play-btn" aria-label="Play">
-                    <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="40" cy="40" r="38" fill="rgba(0,0,0,0.4)" stroke="rgba(255,255,255,0.9)" stroke-width="2.5"/>
-                        <polygon class="icon-play" points="34,24 58,40 34,56" fill="white"/>
-                        <g class="icon-pause" style="display:none"> <rect x="26" y="24" width="9" height="32" rx="2" fill="white"/>
-                            <rect x="45" y="24" width="9" height="32" rx="2" fill="white"/>
-                        </g>
-                    </svg>
+                    <img src="./images/img1.webp"/>
                 </div>
             `;
             wrapper.style.position = 'relative';

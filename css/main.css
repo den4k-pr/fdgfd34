@@ -149,7 +149,8 @@
 
 .s1-btn-shadow {
   width: 100%;
-  height: 83px;
+  height: 100px;
+  margin-top: -12px;
   position: relative;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   border-radius: 100px;
@@ -162,8 +163,9 @@
   position: absolute;
   top: 0;
   left: 0;
-  padding: 0 14px;
-  background: linear-gradient(90deg, #E12970 0%, #FB7D93 100%);
+  padding: 8px 14px 0 14px;
+  background: url(../images/btn.webp) no-repeat;
+  background-size: 100% 100%;
   border-radius: 100px;
   outline-offset: -2px;
   display: flex;
@@ -786,9 +788,16 @@ background-clip: text;
   background: rgba(0, 0, 0, 0.1);
 }
 
+.video-play-btn img{
+  width: 38px;
+height: 38px;
+}
+
 .video-overlay.is-playing {
   background: transparent;
+  opacity: 0;
 }
+
 
 .video-play-btn svg {
   width: 45px;
@@ -1680,8 +1689,8 @@ background: linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255,
   .s1-old-price-label { font-size: max(14px, 3.18vw); }
   .s1-old-price-val { width: 13.4vw; height: 5.9vw; font-size: max(14px, 7.04vw); line-height: max(14px, 4.77vw); }
   .s1-footer { top: 135.22vw; width: 100vw; padding-bottom: 9.31vw; padding-left: 5.68vw; padding-right: 5.68vw; gap: 4.31vw; }
-  .s1-btn-shadow { height: 18.86vw; box-shadow: 0 0.9vw 3.4vw rgba(0, 0, 0, 0.15); border-radius: 22.72vw; }
-  .s1-btn { padding: 0 3.18vw; border-radius: 22.72vw; outline-offset: -0.45vw; }
+  .s1-btn-shadow { height: 22.86vw; box-shadow: 0 0.9vw 3.4vw rgba(0, 0, 0, 0.15); border-radius: 22.72vw; }
+  .s1-btn { padding: 2vw 3.18vw 0 3.18vw; border-radius: 22.72vw; outline-offset: -0.45vw; }
   .s1-btn-text { font-size: max(14px, 5.68vw); }
   .s1-footer-text { font-size: max(14px, 3.63vw); }
 
