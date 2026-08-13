@@ -153,6 +153,7 @@
   position: relative;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   border-radius: 100px;
+  overflow: hidden;
 }
 
 .s1-btn {
@@ -857,6 +858,8 @@ background-clip: text;
   width: calc(100% - 25px); /* Віднімаємо лівий паддінг для симетрії */
   margin-top: 25px;
   padding: 7px 10px;
+  margin-left: auto;
+  margin-right: auto;
   background: linear-gradient(310deg, #FF3D88 0%, #FF82A8 52%, #F65D8C 100%);
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.15);
   border-radius: 56px;
@@ -874,7 +877,8 @@ background-clip: text;
   justify-content: space-between;
   align-items: center;
   margin-top: 20px;
-  padding-right: 25px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .s7-pagination {
@@ -1291,7 +1295,6 @@ background-clip: text;
     width: 35px;
     height: 35px;
     border-radius: 50%;
-    background: linear-gradient(90deg, #B0002B 0%, #660A22 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1493,7 +1496,8 @@ background: linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255,
 }
 
 .footer {
-  background: linear-gradient(166deg, white 0%, #BCBCBC 87%);
+  background:linear-gradient(166deg, #FFF -12.3%, #D5D5D5 65.82%);
+
   border-radius: 36px 36px 0 0;
   border: 1px solid rgba(255, 255, 255, 0.53);
   backdrop-filter: blur(15.4px);
@@ -1602,10 +1606,10 @@ background: linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255,
 
 
 /* Підключення анімації до звичайних CTA-кнопок на сторінці (за бажанням) */
-
+/* 
 .s1-btn {
   animation: ctaPulse 2s infinite cubic-bezier(0.4, 0, 0.6, 1);
-}
+} */
 
 @keyframes ctaPulse {
   0% {
@@ -1629,6 +1633,7 @@ background: linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255,
 }
 
 /* --- Псевдоелемент бліку --- */
+.s1-btn-shadow::after,
 .footer-cta-button::after {
   content: '';
   position: absolute;
@@ -1750,7 +1755,7 @@ background: linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255,
   .s7-img { border-radius: 2.72vw; }
   .s7-play-btn { width: 12.04vw; height: 12.04vw; box-shadow: 0 0.68vw 1.81vw rgba(0,0,0,0.25); }
   .s7-badge { width: calc(100% - 5.68vw); margin-top: 5.68vw; padding: 1.59vw 2.27vw; border-radius: 12.72vw; box-shadow: 0 0.45vw 3.4vw rgba(0,0,0,0.15); font-size: max(14px, 5.56vw); }
-  .s7-controls { margin-top: 4.54vw; padding-right: 5.68vw; }
+  .s7-controls { margin-top: 4.54vw; }
   .s7-pagination { gap: 1.81vw; max-width: 45.45vw; }
   .s7-pagination .swiper-pagination-bullet { min-width: 2.04vw; height: 2.04vw; border-width: 0.22vw; }
   .s7-pagination .swiper-pagination-bullet-active { border-width: 0.45vw; }
